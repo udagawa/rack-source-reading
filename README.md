@@ -1,7 +1,7 @@
 #Rack, a modular Ruby webserver interface
    
 
-[](https://secure.travis-ci.org/udagawa/rack-source-reading.svg)  
+<img src="https://api.travis-ci.org/udagawa/rack-source-reading.svg?branch=master&.png" />  
 
 
 This repository is for the source code reading the [rack](https://github.com/rack/rack)  
