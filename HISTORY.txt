@@ -1,0 +1,30 @@
+*initail 2015/03/07
+
+-initail source code reading(git checkout -b init 22f0)
+-support only the WEBrick handler
+-use the bundle, the rake, the minitest and the guard
+
+**envirment value
+
+HTTPS: not required
+
+**handler sets the env
+
+-rack.input: request body
+-rack.errors: error output
+-rack.version 
+-rack.multithread
+-rack.multiprocess
+-rack.run_once
+-rack.url_scheme: if the EVN["HTTPS"] set that rack.url_scheme is "https" else rack.url_scheme is "http"
+-HTTP_VERSION: if no setting is SERVER_PROTOCOL
+-QUERY_STRING: if no setting is ""
+-REQUEST_PATH: if no setting is "/"
+
+**test architecture
+
++WEBrick create
+++set handler(Rack::Handler::WEBrick), rack(TestRequest)
+++start
++HTTPRequest -> WEBRick -> handler -> rack -> handler -> WEBrick -> HTTPResonse
++WEBrick stop
